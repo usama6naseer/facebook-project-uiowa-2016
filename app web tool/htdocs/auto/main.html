@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Facebook Application Test
+	</title>
+	<script src="http://maps.googleapis.com/maps/api/js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script>
+
+
+		function check_app() {
+			// alert('Hello world!')
+			$.ajax({
+				type: "POST",
+				url: "test.py",
+				data: { param: " "}
+			}).done(function( o ) {
+			   // do something
+			   alert('Success')
+			});
+
+		}
+	</script>
+
+</head>
+
+<body>
+
+	<h1>Facebook Vulnerability Tester</h1>
+	<!-- <a href="#" class="btn btn-info" role="button" onclick="run_python.php">Check Application</a> -->
+	<form name="input" action="http://localhost/auto/run_python.php"    method="post">
+	<!-- <form name="input" action="http://localhost/cgi-bin/test.py"    method="post"> -->
+		App ID: <input type="text" name="user" value="*****"><br>
+		<input type="submit" value="Submit">
+	</form>
+</body>
+
+</html>
+ 
